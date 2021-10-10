@@ -8,7 +8,7 @@ async function signupFormHandler(event) {
 
   // Check for username and password entered
   if (username && password) {
-    const response = await fetch('/api/users/login', {
+    const response = await fetch('/api/users', {
       method: 'post',
       body: JSON.stringify({
           username,
