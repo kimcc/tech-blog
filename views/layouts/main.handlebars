@@ -8,12 +8,30 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
+  <h1>
+    Test
+  </h1>
 
-  <nav>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/dashboard">Dashboard</a>
+      <!-- If the user is logged in, hide the login button and show logout. Do the reverse if the user is logged out. -->
+      {{#if loggedIn}}
+      <button id="logout" class="btn-no-style">logout</button>
+      {{else}}
+      <a href="/login">Login</a>
+      {{/if}}
+    </nav>
+  </header>
 
-  </nav>
+  <main>   
+    {{{ body }}}
+  </main>
 
-  {{{ body }}}
-  
+  {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+  {{/if}}
+
 </body>
 </html>

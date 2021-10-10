@@ -11,7 +11,6 @@ class User extends Model {
 
 User.init(
   {
-    // id column which sets the id as an integer, that cannot be null, is the primary key, and will autoincrement
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -21,8 +20,8 @@ User.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true
     },
-    // password column where the password must be at least 8 characters
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -32,11 +31,22 @@ User.init(
     }
   },
   {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'user'
+    hooks: {
+      async beforeCreate(newUserData) {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+      async beforeUpdate(updatedUserData) {
+        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        return updatedUserData;
+      }
+    },
+    // Table configuration options
+    sequelize, 
+    timestamps: false, 
+    freezeTableName: true, 
+    underscored: true, 
+    modelName: 'user' 
   }
 );
 

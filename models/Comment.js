@@ -22,7 +22,7 @@ Comment.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1] // Comment must be at least 1 character
+        len: [1]
       }
     },
     post_id: {

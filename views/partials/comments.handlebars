@@ -1,0 +1,13 @@
+<div class="comments">
+  <!-- We can use 'this' to refer to the comments array -->
+  {{#each this}}
+  <section class="comment">
+    <div class="meta">
+      {{user.username}} on {{format_date created_at}} <!-- This is the same as calling format_date(create_at)-->
+    </div>
+    <div class="text">
+      {{comment_text}}
+    </div>
+  </section>
+  {{/each}}
+</div>
