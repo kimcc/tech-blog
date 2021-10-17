@@ -11,5 +11,13 @@ module.exports = {
       return `${word}s`;
     } 
     return word;
+  },
+
+  truncate_string: (string) => {
+    if (string.length > 300) {
+      return string.slice(0, 300) + "...";
+    } else {
+      return string;
+    }
   }
 }

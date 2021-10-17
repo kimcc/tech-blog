@@ -2,6 +2,9 @@
   <a class="post-title" href="/post/{{id}}">
     <h2>{{title}}</h2>
   </a>
+  <p>
+    {{truncate_string post_text}}
+  </p>
 <div class="meta">
   by {{user.username}} on {{format_date created_at}}
   |

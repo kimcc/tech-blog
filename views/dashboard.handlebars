@@ -1,32 +1,34 @@
-<section>
-  <h2>Create New Post</h2>
+{{> navbar }}
+<div class="dashboard-wrapper">
+  <section>
+    <h2>Create new post</h2>
 
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-      <label for="post-text">Text</label>
-      <input id="post-text" name="post-text" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
+    <form class="new-post-form">
+      <div>
+        <label for="post-title">Title</label>
+        <input type="text" id="post-title" name="post-title" />
+      </div>
+      <div>
+        <label for="post-text">Text</label>
+        <textarea id="post-text" rows="4" name="post-text"></textarea>
+      </div>
+      <button type="submit">Create</button>
+    </form>
+  </section>
 
-<!-- Wrap this in posts.length so that users will only see this content if there are posts -->
-{{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
-
+  <!-- Wrap this in posts.length so that users will only see this content if there are posts -->
+  {{#if posts.length}}
+  <section>
+    <h2>Your posts</h2>
+    <ul class="post-list">
+      {{#each posts as |post|}}
+      <li>
+        {{> post-info post}}
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/if}}
+</div>
 <script src="/javascript/add-post.js"></script>

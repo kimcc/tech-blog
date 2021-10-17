@@ -7,7 +7,8 @@
     {{/if}}
     <!-- If the user is logged in, hide the login button and show logout. Do the reverse if the user is logged out. -->
     {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">logout</button>
+    {{!-- <button id="logout" class="btn-no-style">logout</button> --}}
+    <a class="logout" id="logout">Logout</a>
     {{else}}
     <a href="/login">Login</a>
     {{/if}}

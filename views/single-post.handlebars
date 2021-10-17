@@ -1,14 +1,28 @@
-{{> post-info post }}
+{{> navbar }}
+
+<article class="post">
+  <a class="post-title" href="/post/{{post.id}}">
+    <h2>{{post.title}}</h2>
+  </a>
+  <p>
+    {{post.post_text}}
+  </p>
+<div class="meta">
+  by {{post.user.username}} on {{format_date post.created_at}}
+  |
+  <a href="/post/{{id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+</div>
+</article>
+
 <!-- conditionally  render the form element if the user is logged in -->
 {{#if loggedIn}}
 <form class="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea id="comment-text" rows="4" name="comment-text"></textarea>
   </div>
 
   <div>
-    <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
+    <button type="submit">Add comment</button>
   </div>
 </form>
 {{/if}}
@@ -17,5 +31,4 @@
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
 {{/if}}
