@@ -4,6 +4,7 @@
   --light-grey: #909090;
   --lightest-grey: #C1C1C1;
   --green: #3BF970;
+  --red: #EF0C0C;
 
   --body: 'Saira', sans-serif;
 }
@@ -26,7 +27,7 @@ main {
 
 .container {
   width: 100%;
-  padding: 0 16px;
+  padding: 0 16px 24px 0;
   display: flex;
   margin: 0 auto;
 }
@@ -60,7 +61,7 @@ form {
 input {
   width: 100%;
   padding: 0.625em 0.75em;
-  margin: 0.25em 0;
+  margin: 0.25em 0 1em 0;
   box-sizing: border-box;
   font-size: 1em;
   border: 1px solid var(--lightest-grey);
@@ -73,10 +74,13 @@ textarea {
   resize: vertical;
   border: 1px solid var(--lightest-grey);
   padding: 0.625em 0.75em;
+  margin: 0.25em 0 1em 0;
+  min-height: 49px;
 }
 
 label {
   font-weight: 600;
+  margin-top: 1.5em;
 }
 
 button {
@@ -88,12 +92,12 @@ button {
   font-size: 16px;
   font-weight: 600;
   margin-top: 1em;
-  transition: opacity 0.3s;
+  transition: all 0.3s;
 }
 
 button:hover {
   opacity: 0.8;
-  transition: opacity 0.3s;
+  transition: all 0.3s;
 }
 
 button:focus {
@@ -104,6 +108,15 @@ button:hover {
   cursor: pointer;
 }
 
+.delete-button {
+  background-color: transparent;
+  color: var(--red);
+  border: 3px solid var(--red);
+}
+
+.delete-button:hover {
+  background-color:rgba(239, 12, 12, 0.12);
+}
 
 /* Navbar */
 nav {
@@ -119,7 +132,7 @@ nav a {
 
 .logo {
   font-size: 2.125em;
-  display: block;
+  display: inline-block;
   font-weight: 600;
 }
 
@@ -148,7 +161,6 @@ ul {
 .meta a:hover {
   color: var(--dark-grey);
   transition: all 0.25s;
-
 }
 
 .meta p {
@@ -211,8 +223,6 @@ ul {
   transform-origin: top left;
   transition: transform 0.25s;
 }
-
-
 
 .form-login-text {
   margin-top: 1.5em;

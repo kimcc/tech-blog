@@ -1,22 +1,20 @@
+{{> navbar }}
+
 <article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
   <h2>
-    Edit Post
+    Edit post
   </h2>
   <form class="edit-post-form">
     <div>
+      <label for="post-title">Title</label>
       <input name="post-title" type="text" value="{{post.title}}" />
     </div>
     <div>
+      <label for="post-text">Text</label>
       <textarea id="post-text" rows="4">{{post.post_text}}</textarea>
     </div>
-    <div>
-      by you on {{format_date post.created_at}}
-      |
-      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
-    </div>
     <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
+    <button type="button" class="delete-button" id="delete-post-btn">Delete post</button>
   </form>
 </article>
 
