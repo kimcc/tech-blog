@@ -23,4 +23,23 @@ async function newFormHandler(event) {
   }
 }
 
+// Displays modal when button clicked and closes it when the close or background is clicked
+const modal = document.getElementById("modal");
+const addPostButton = document.getElementById("addPostButton");
+const close = document.getElementById("close");
+
+addPostButton.onclick = function() {
+  modal.style.display = "block";
+}
+
+close.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
