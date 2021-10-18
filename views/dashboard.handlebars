@@ -30,10 +30,9 @@
 
   </div>
     
-
   <!-- Wrap this in posts.length so that users will only see this content if there are posts -->
   {{#if posts.length}}
-  <section>
+  <section class="dashboard-posts">
     <ul class="post-list">
       {{#each posts as |post|}}
       <li>

@@ -7,7 +7,7 @@
       {{comment.comment_text}}
     </div>
     <div class="meta">
-      {{user.username}} on {{format_date comment.created_at}} <!-- This is the same as calling format_date(create_at)-->
+      by {{user.username}} on {{format_date comment.created_at}} <!-- This is the same as calling format_date(create_at)-->
     </div>
   </section>
   {{/each}}

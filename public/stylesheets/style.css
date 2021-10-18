@@ -26,7 +26,7 @@ main {
 }
 
 .container {
-  padding: 0 16px 24px 16px;
+  padding: 0 16px 64px 16px;
   display: flex;
   margin: 0 auto;
 }
@@ -34,7 +34,7 @@ main {
 h1 {
   font-size: 1.75em;
   line-height: 2.5em;
-  margin: 0;
+  margin: 42px 0 0 0;
 }
 
 h2 {
@@ -46,6 +46,7 @@ h2 {
 
 h3 {
   font-size: 1.1em;
+  margin: 72px 0 8px 0;
 }
 
 p {
@@ -71,7 +72,7 @@ form {
 input {
   width: 100%;
   padding: 0.625em 0.75em;
-  margin: 0.25em 0 1em 0;
+  margin: 0.2em 0 1.25em 0;
   box-sizing: border-box;
   font-size: 1em;
   border: 1px solid var(--lightest-grey);
@@ -96,9 +97,9 @@ label {
 button {
   width: 100%;
   background-color: var(--dark-grey);
-  border: none;
+  border: 3px solid var(--dark-grey);
   color: #fff;
-  padding: 0.8em 1.5em;
+  padding: 0.6em 1.5em;
   font-size: 16px;
   font-weight: 600;
   margin-top: 1em;
@@ -122,6 +123,7 @@ button:hover {
   background-color: transparent;
   color: var(--red);
   border: 3px solid var(--red);
+  margin-top: 1.5em;
 }
 
 .delete-button:hover {
@@ -130,20 +132,21 @@ button:hover {
 
 /* Navbar */
 nav {
-  margin: 3em 0 4em 0;
+  margin: 3em 0 2em 0;
 }
 
 nav a {
   text-transform: uppercase;
   font-weight: 600;
-  margin-right: 1em;
   position: relative;
+  margin-right: 1.5em;
 }
 
 .logo {
   font-size: 2.125em;
   display: inline-block;
   font-weight: 600;
+  margin-bottom: 0.25em;
 }
 
 .logo span {
@@ -158,10 +161,15 @@ nav a {
 ul {
   list-style-type: none;
   padding: 0px;
+  margin: 0;
 }
 
 .meta, .meta a, .meta p {
   color: var(--light-grey);
+}
+
+.meta {
+  margin: -6px 0 0 0;
 }
 
 .meta a {
@@ -177,8 +185,24 @@ ul {
   display: inline-block;
 }
 
+.meta span {
+  margin: 0 4px;
+}
+
+.dashboard-posts {
+  margin-top: -40px;
+}
+
+.post {
+  margin-top: 48px;
+}
+
 .post h2 {
   display: inline-block;
+}
+
+.post p {
+  margin-top: -3px;
 }
 
 .post-title {
@@ -188,11 +212,12 @@ ul {
 .post-header {
   display: flex;
   justify-content: space-between;
-
+  align-items: center;
 }
 
 .post-header button {
   width: initial;
+  padding: 0.6em 1.5em;
 }
 
 .posts-none {
@@ -201,6 +226,21 @@ ul {
 
 .comment {
   margin-bottom: 1.5em;
+}
+
+.comment .meta {
+  margin-top: 0.5em;
+}
+
+.edit-link {
+  font-weight: 600;
+  margin-top: 0.5em;
+  display: inline-block;
+  position: relative;
+}
+
+.edit-post-form {
+  margin-top: 16px;
 }
 
 /* Post modal */ 
@@ -243,10 +283,11 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .form-container .logo {
-  margin: 1em 0 1em 0;
+  margin: 1.5em 0 1em 0;
   text-transform: uppercase;
 }
 
@@ -256,11 +297,11 @@ ul {
   position: relative;
 }
 
-.form-container a:not(.logo):hover::before, .post-title:hover::before, nav a:not(.logo):hover::before {
+.form-container a:not(.logo):hover::before, .post-title:hover::before, nav a:not(.logo):hover::before, .edit-link:hover::before {
   transform: scaleX(1);
 }
 
-.form-container a:not(.logo)::before, .post-title::before, nav a:not(.logo)::before {
+.form-container a:not(.logo)::before, .post-title::before, nav a:not(.logo)::before, .edit-link::before {
   content: "";
   position: absolute;
   display: block;
