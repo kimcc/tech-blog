@@ -1,12 +1,12 @@
-<div class="comments">
+<div>
   <!-- We can use 'this' to refer to the comments array -->
   {{#each this as |comment|}}
   <section class="comment">
+    <div>
+      {{comment.comment_text}}
+    </div>
     <div class="meta">
       {{user.username}} on {{format_date comment.created_at}} <!-- This is the same as calling format_date(create_at)-->
-    </div>
-    <div class="text">
-      {{comment.comment_text}}
     </div>
   </section>
   {{/each}}

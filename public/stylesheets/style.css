@@ -15,14 +15,20 @@ body, input, button, textarea {
 
 body {
   font-family: var(--body);
-  display: flex;
-  justify-content: center;
   margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%
 }
 
 .container {
   width: 100%;
   padding: 0 16px;
+  display: flex;
+  margin: 0 auto;
 }
 
 a, a:visited  {
@@ -131,8 +137,22 @@ ul {
   padding: 0px;
 }
 
-.meta, .meta a {
+.meta, .meta a, .meta p {
   color: var(--light-grey);
+}
+
+.meta a {
+  transition: all 0.25s;
+}
+
+.meta a:hover {
+  color: var(--dark-grey);
+  transition: all 0.25s;
+
+}
+
+.meta p {
+  display: inline-block;
 }
 
 .post h2 {
@@ -143,8 +163,13 @@ ul {
   position: relative;
 }
 
+.comment {
+  margin-bottom: 1.5em;
+}
+
 /* Login & Signup */
 .form-container {
+  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,6 +177,7 @@ ul {
 
 .form-container .logo {
   margin: 1em 0 1em 0;
+  text-transform: uppercase;
 }
 
 .form-group {

@@ -8,7 +8,7 @@
       <input name="post-title" type="text" value="{{post.title}}" />
     </div>
     <div>
-      <input name="post-text" type="text" value="{{post.post_text}}" />
+      <textarea id="post-text" rows="4">{{post.post_text}}</textarea>
     </div>
     <div>
       by you on {{format_date post.created_at}}
@@ -20,18 +20,5 @@
   </form>
 </article>
 
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">add comment</button>
-  </div>
-</form>
-
-{{> comments post.comments}}
-
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
-<script src="/javascript/comment.js"></script>

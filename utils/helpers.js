@@ -13,6 +13,7 @@ module.exports = {
     return word;
   },
 
+  // Truncate the string if more than 300 characters
   truncate_string: (string) => {
     if (string.length > 300) {
       return string.slice(0, 300) + "...";
