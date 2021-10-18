@@ -14,11 +14,11 @@
 </div>
 </article>
 
-<!-- conditionally  render the form element if the user is logged in -->
+<!-- Conditionally render the form element if the user is logged in -->
 {{#if loggedIn}}
-<form class="comment-form">
+<form id="commentForm" class="comment-form">
   <div>
-    <textarea id="comment-text" rows="4" name="comment-text"></textarea>
+    <textarea id="comment-text" rows="5" name="comment-text"></textarea>
   </div>
 
   <div>
@@ -27,6 +27,7 @@
 </form>
 {{/if}}
 
+<!-- If comments exist, show the comments -->
 {{#if post.comments.length}}
   {{> comments post.comments}}
 {{/if}}

@@ -9,8 +9,7 @@ User.hasMany(Post, {
 });
 
 Post.belongsTo(User, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
+  foreignKey: 'user_id'
 });
 
 Comment.belongsTo(User, {
@@ -27,7 +26,7 @@ User.hasMany(Comment, {
 
 Post.hasMany(Comment, {
   foreignKey: 'post_id',
-  onDelete: 'CASCADE'
+  onDelete: 'CASCADE' // Will delete the child data (comment) when the parent data (post) is deleted
 });
 
 module.exports = { User, Post, Comment };
