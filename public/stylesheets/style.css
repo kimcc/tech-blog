@@ -224,6 +224,7 @@ ul {
   color: var(--light-grey)
 }
 
+/* Comments */
 .comment {
   margin-bottom: 1.5em;
 }
@@ -257,7 +258,7 @@ ul {
   background-color: rgba(0,0,0,0.4); 
 }
 
-/* Modal Content */
+/* Modal content */
 .modal-content {
   background-color: #fff;
   margin: auto;

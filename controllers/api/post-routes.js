@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Post, User, Comment } = require("../../models");
 const withAuth = require('../../utils/auth');
 
-// get all users
+// Get all posts
 router.get('/', (req, res) => {
   Post.findAll({
     order: [['created_at', 'DESC']],
@@ -13,7 +13,6 @@ router.get('/', (req, res) => {
       'created_at'
     ],
     include: [
-      // include the Comment model here:
       {
         model: Comment,
         attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],

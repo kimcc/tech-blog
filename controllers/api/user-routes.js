@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// get all users
+// Get all users
 router.get('/', (req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] }
@@ -108,7 +108,7 @@ router.post('/logout', withAuth, (req, res) => {
 });
 
 router.put('/:id', withAuth, (req, res) => {
-  // pass in req.body instead to only update what's passed through
+  // Pass in req.body instead to only update what's passed through
   User.update(req.body, {
     individualHooks: true,
     where: {
