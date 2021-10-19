@@ -27,7 +27,7 @@ main {
 .container {
   padding: 0 16px 64px 16px;
   display: flex;
-  margin: 0 auto;
+  justify-content: center;
 }
 
 h1 {
@@ -333,9 +333,6 @@ ul {
 
 /* Media Queries */
 @media screen and (min-width: 960px) {
-  .container {
-    width: 740px;
-  }
 
   main {
     width: 740px;
