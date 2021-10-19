@@ -30,6 +30,7 @@ main {
   display: flex;
   justify-content: center;
   max-width: 1900px;
+  margin: 0 auto;
 }
 
 h1 {
