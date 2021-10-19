@@ -1,10 +1,12 @@
 {{> navbar }}
 
 <!-- Loop through posts and display in a list -->
-<ul class="post-list">
-  {{#each posts as |post|}}
-    <li>
-    {{> post-info post }}
-  </li>
-  {{/each}}
-</ul>
+<div>
+  <ul class="post-list">
+    {{#each posts as |post|}}
+      <li>
+      {{> post-info post }}
+    </li>
+    {{/each}}
+  </ul>
+</div>

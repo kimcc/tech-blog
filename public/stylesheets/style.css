@@ -16,7 +16,7 @@ body, input, button, textarea {
 
 body {
   font-family: var(--body);
-  margin: 0;
+  max-width: 100vw;
 }
 
 main {
