@@ -5,9 +5,9 @@
   <p>
     {{truncate_string post_text}}
   </p>
-<div class="meta">
-  by {{user.username}} on {{format_date created_at}}
-  <span>|</span>
-  <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-</div>
+  <div class="meta">
+    by {{user.username}} on {{format_date created_at}}
+    <span>|</span>
+    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+  </div>
 </article>

@@ -32,16 +32,16 @@
     
   <!-- Wrap this in posts.length so that users will only see this content if there are posts -->
   {{#if posts.length}}
-  <section class="dashboard-posts">
-    <ul class="post-list">
-      {{#each posts as |post|}}
-      <li>
-        {{> post-info post}}
-        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-      </li>
-      {{/each}}
-    </ul>
-  </section>
+    <section class="dashboard-posts">
+      <ul class="post-list">
+        {{#each posts as |post|}}
+        <li>
+          {{> post-info post}}
+          <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+        </li>
+        {{/each}}
+      </ul>
+    </section>
   {{else}}
     <h3 class="posts-none">You don't have any posts yet</h3>
   {{/if}}

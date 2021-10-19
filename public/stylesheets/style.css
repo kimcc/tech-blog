@@ -46,7 +46,7 @@ h2 {
 
 h3 {
   font-size: 1.1em;
-  margin: 72px 0 8px 0;
+  margin-bottom: 8px;
 }
 
 p {
@@ -225,12 +225,20 @@ ul {
 }
 
 /* Comments */
+.comments {
+  transform: translateY(72px); /* Keeps the page from jumping */
+}
+
 .comment {
-  margin-bottom: 1.5em;
+  margin-bottom: 2.75em;
 }
 
 .comment .meta {
   margin-top: 0.5em;
+}
+
+.comment-form {
+  margin-top: 1em;
 }
 
 .edit-link {

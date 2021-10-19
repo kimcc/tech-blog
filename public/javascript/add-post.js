@@ -3,13 +3,13 @@ async function newFormHandler(event) {
   event.preventDefault();
 
   const title = document.querySelector('input[name="post-title"]').value.trim();
-  const postText = document.getElementById('post-text').value.trim();
+  const post_text = document.getElementById('post-text').value.trim();
 
   const response = await fetch('/api/posts', {
     method: 'POST',
     body: JSON.stringify({
-      title: title, 
-      post_text: postText
+      title, 
+      post_text
     }),
     headers: {
       'Content-Type': 'application/json'
@@ -19,26 +19,26 @@ async function newFormHandler(event) {
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
-    alert(response.statusText);
+      alert(response.statusText);
   }
 }
 
 // Displays modal when button clicked and closes it when the close or background is clicked
-const modal = document.getElementById("modal");
-const addPostButton = document.getElementById("addPostButton");
-const close = document.getElementById("close");
+const modal = document.getElementById('modal');
+const addPostButton = document.getElementById('addPostButton');
+const close = document.getElementById('close');
 
 addPostButton.onclick = function() {
-  modal.style.display = "block";
+  modal.style.display = 'block';
 }
 
 close.onclick = function() {
-  modal.style.display = "none";
+  modal.style.display = 'none';
 }
 
 window.onclick = function(event) {
   if (event.target == modal) {
-    modal.style.display = "none";
+    modal.style.display = 'none';
   }
 }
 
