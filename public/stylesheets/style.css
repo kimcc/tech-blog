@@ -16,16 +16,17 @@ body, input, button, textarea {
 
 body {
   font-family: var(--body);
+  margin: 0;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  width: 100%
+  width: 100%;
+  padding: 0 16px 64px 16px;
 }
 
 .container {
-  padding: 0 16px 64px 16px;
   display: flex;
   justify-content: center;
 }
