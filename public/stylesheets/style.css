@@ -17,7 +17,7 @@ body, input, button, textarea {
 body {
   font-family: var(--body);
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 main {
