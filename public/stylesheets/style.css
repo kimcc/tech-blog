@@ -255,7 +255,7 @@ ul {
 .modal {
   display: none; 
   position: fixed; 
-  z-index: 1; 
+  z-index: 99; 
   padding-top: 100px; 
   left: 0;
   top: 0;
@@ -334,7 +334,11 @@ ul {
 /* Media Queries */
 @media screen and (min-width: 960px) {
   .container {
-    max-width: 740px;
+    width: 740px;
+  }
+
+  main {
+    width: 740px;
   }
 
   form {
