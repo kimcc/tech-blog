@@ -7,11 +7,11 @@
   <p>
     {{post.post_text}}
   </p>
-<div class="meta">
-  by {{post.user.username}} on {{format_date post.created_at}}
-  <span>|</span>
-  <p>{{post.comments.length}} {{format_plural "comment" post.comments.length}}</p>
-</div>
+  <div class="meta">
+    by {{post.user.username}} on {{format_date post.created_at}}
+    <span>|</span>
+    <p>{{post.comments.length}} {{format_plural "comment" post.comments.length}}</p>
+  </div>
 </article>
 
 <!-- Conditionally render the form element if the user is logged in -->
