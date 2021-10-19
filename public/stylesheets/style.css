@@ -344,5 +344,6 @@ ul {
 
   .modal-content {
     width: 40%;
+    max-width: 540px;
   }
 }
