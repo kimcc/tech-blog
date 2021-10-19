@@ -22,12 +22,18 @@ body {
 
 main {
   padding: 0 16px 64px 16px;
+  width: 740px;
 }
 
 .container {
   display: flex;
   justify-content: center;
   width: 100vw;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 740px;
 }
 
 h1 {
@@ -331,10 +337,6 @@ ul {
   display: inline;
 }
 
-.content-wrapper {
-  width: 740px;
-}
-
 /* Media Queries */
 @media screen and (min-width: 960px) {
 
@@ -345,5 +347,9 @@ ul {
   .modal-content {
     width: 40%;
     max-width: 540px;
+  }
+
+  .content-wrapper {
+    width: 740px;
   }
 }
