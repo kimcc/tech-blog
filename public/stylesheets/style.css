@@ -29,6 +29,7 @@ main {
 .container {
   display: flex;
   justify-content: center;
+  max-width: 1900px;
 }
 
 h1 {
