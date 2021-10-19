@@ -9,12 +9,6 @@
   --body: 'Saira', sans-serif;
 }
 
-* { 
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* Main */
 body, input, button, textarea {
   font-family: var(--body);
@@ -23,6 +17,7 @@ body, input, button, textarea {
 body {
   font-family: var(--body);
   overflow-x: hidden;
+  margin: 0;
 }
 
 main {
